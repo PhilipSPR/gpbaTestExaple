@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gpbaTestExaple", "gpbaTestExaple\gpbaTestExaple.csproj", "{4785ED82-3EA1-4A8F-B46A-82D8D344F9CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4785ED82-3EA1-4A8F-B46A-82D8D344F9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4785ED82-3EA1-4A8F-B46A-82D8D344F9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4785ED82-3EA1-4A8F-B46A-82D8D344F9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4785ED82-3EA1-4A8F-B46A-82D8D344F9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F7ED8C2-F13B-46AE-AE4C-F274DF57D1DB}
+	EndGlobalSection
+EndGlobal
