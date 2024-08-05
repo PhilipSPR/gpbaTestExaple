@@ -23,11 +23,25 @@ namespace gpbaTestExaple.Implementations
 
         public async Task<List<Offer>> SearchAsync(string query)
         {
-            int supplerId; 
-            int.TryParse(query, out supplerId);
             return await _context.Offers
-                .Include(o => o.SupplierId)
-                .Where(o => o.Brand.Contains(query) || o.Model.Contains(query) || o.SupplierId == supplerId)
+                .Join(
+                    _context.Suppliers,
+                    offer => offer.SupplierId,
+                    supplier => supplier.Id,
+                    (offer, supplier) => new { Offer = offer, Supplier = supplier }
+                )
+                .Where(result => result.Offer.Brand.Contains(query)
+                    || result.Offer.Model.Contains(query)
+                    || result.Supplier.Name.Contains(query))
+                .Select(result => new
+                {
+                    result.Offer.Id,
+                    result.Offer.Brand,
+                    result.Offer.Model,
+                    result.Offer.SupplierId,
+                    SupplierName = result.Supplier.Name,
+                    result.Offer.RegistrationDate
+                })
                 .ToListAsync();
         }
 
